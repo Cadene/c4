@@ -123,13 +123,3 @@ class C4(torch.utils.data.Dataset):
 
     def __len__(self):
         return len(self.ids)
-
-    def make_batch_loader(self):
-        data_loader = data.DataLoader(self,
-            batch_size=self.batch_size,
-            num_workers=self.nb_threads,
-            shuffle=self.shuffle,
-            pin_memory=self.pin_memory,
-            collate_fn=self.collate_fn,
-            drop_last=False)
-        return data_loader
