@@ -87,4 +87,4 @@ class ConfusionMeter():
         print('confusion_matrix', confm)
         for cid in range(self.k):
             binary_acc = float(confm[cid][cid] / sum(confm[cid]) * 100)
-            print('binacc_cid,{cid}', binary_acc)
+            print(f'binacc_cid,{cid}', binary_acc)
